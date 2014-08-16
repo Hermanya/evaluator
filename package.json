@@ -1,0 +1,11 @@
+{
+  "name": "simplify",
+  "version": "0.0.0",
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "*",
+    "grunt-coffeelint": "*",
+    "grunt-coffeeify": "^0.1.3",
+    "grunt-mocha": "^0.4.11"
+  }
+}
