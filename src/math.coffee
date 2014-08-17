@@ -20,4 +20,10 @@ math.times = new Op(
   body: (x,y) -> x * y
 )
 math['*'] = math.times
+math.subtract = new Op(
+  domain: 'Number, Number'
+  range: 'Number'
+  body: (x,y) -> x - y
+)
+math['-'] = math.subtract
 module.exports = math

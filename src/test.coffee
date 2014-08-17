@@ -17,7 +17,7 @@ describe 'Parse', ->
     it 'should normalize operators to prefix notation', ->
       listify = require './listify.coffee'
       math = require './math.coffee'
-      normalize = require './normalize.coffee'
-      f = (s) -> normalize(listify s)
+      prefixify = require './prefixify.coffee'
+      f = (s) -> prefixify(listify s)
+      assert.deepEqual f('2+2+ 3'), [math.sum,[math.sum, 2, 2], 3]
       assert.deepEqual f('+ 2 2'), [math.sum, 2, 2]
-      #assert.deepEqual f('2+ 2+2'), [math.sum, [math.sum, 2, 2], 2]
