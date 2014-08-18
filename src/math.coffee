@@ -11,18 +11,23 @@ math = {}
 math.sum = new Op(
   domain: 'Number, Number'
   range: 'Number'
+  precedence: 0
   body: (x,y) -> x + y
 )
 math['+'] = math.sum
+
 math.times = new Op(
   domain: 'Number, Number'
   range: 'Number'
+  precedence: 1
   body: (x,y) -> x * y
 )
 math['*'] = math.times
+
 math.subtract = new Op(
   domain: 'Number, Number'
   range: 'Number'
+  precedence: 0
   body: (x,y) -> x - y
 )
 math['-'] = math.subtract
